@@ -80,7 +80,7 @@ export default function Pricing() {
               highlight={p.highlight}
               title={p.highlight ? `"name" : "Most Popular"` : undefined}
             >
-              <div className="p-6">
+              <div className={`p-6 pb-15 ${p.highlight && "bg-[#001A12]"}`}>
                 <div className="flex items-center gap-2 mb-4">
                   <span style={{ color: p.accent }}>📁</span>
                   <span
@@ -118,7 +118,7 @@ export default function Pricing() {
         </div>
 
         {/* Still hesitating banner */}
-        <div className="border border-white/15 rounded-xl p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div className="border-2 border-white/15 p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <h3
               className="text-2xl font-bold text-white mb-1"

@@ -1,13 +1,15 @@
 import BrowserFrame from "@/utilis/BrowserFrame";
+import { FaDribbble, FaGithub, FaBehance, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function About() {
   const socials = [
-    { icon: "🏀", label: "Dribbble" },
-    { icon: "⚫", label: "GitHub" },
-    { icon: "Bē", label: "Behance", special: true },
-    { icon: "in", label: "LinkedIn" },
-    { icon: "𝕏", label: "Twitter" },
-  ];
+  { icon: <FaDribbble size={32} />, href: "https://dribbble.com/shohag4y/", hoverColor: "#ea4c89", bg: "#1a1a1a" },
+  { icon: <FaGithub size={32} />,   href: "https://github.com/shohag-stack", hoverColor: "#ffffff", bg: "#1a1a1a" },
+  { icon: <FaBehance size={32} />,  href: "https://www.behance.net/shohag4y", hoverColor: "#0057ff", bg: "#1a1a1a" },
+  { icon: <FaLinkedinIn size={32} />, href: "https://www.linkedin.com/in/shohag4y/", hoverColor: "#0a66c2", bg: "#1a1a1a" },
+  { icon: <FaXTwitter size={32} />, href: "https://x.com/shohag4y", hoverColor: "#ffffff", bg: "#1a1a1a" },
+];
   return (
     <section className="bg-black py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -75,21 +77,22 @@ export default function About() {
           </div>
           {/* Social icons strip */}
           <div className="flex items-center gap-5 px-6 py-4 border-t border-white/10">
-            {[
-              { bg: "#ea4c89", label: "D", title: "Dribbble" },
-              { bg: "#fff", label: "⚫", title: "GitHub", dark: true },
-              { bg: "#0057ff", label: "Bē", title: "Behance" },
-              { bg: "#0a66c2", label: "in", title: "LinkedIn" },
-              { bg: "#fff", label: "𝕏", title: "Twitter", dark: true },
-            ].map((s) => (
+            {socials.map((s, i) => (
               <a
-                href="#"
-                key={s.title}
-                title={s.title}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold hover:opacity-80 transition-opacity"
-                style={{ background: s.bg, color: s.dark ? "#000" : "#fff" }}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={i}
+                href={s.href}
+                className="w-12 h-12 rounded-full flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all duration-200"
+                style={{ backgroundColor: s.bg }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = s.hoverColor)
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = s.bg)
+                }
               >
-                {s.label}
+                <span className={`text-white text-sm`}>{s.icon}</span>
               </a>
             ))}
           </div>

@@ -1,7 +1,7 @@
 export default function BrowserFrame({ children, title, className = "", highlight = false }) {
   return (
     <div
-      className={`rounded-xl border ${
+      className={`border-2 ${
         highlight ? "border-[#22c55e]" : "border-white/15"
       } overflow-hidden bg-[#111] ${className}`}
     >
@@ -13,7 +13,9 @@ export default function BrowserFrame({ children, title, className = "", highligh
           <span className="ml-2 text-white/35 text-xs font-mono">{title}</span>
         )}
       </div>
-      {children}
+      <div className="flex-1 min-h-0">
+        {children}
+      </div>
     </div>
   );
 }
