@@ -39,7 +39,7 @@ export default function Portfolio() {
           {/* Left: stacked design + develop frames */}
           <div className="flex flex-col gap-5 h-full">
             <BrowserFrame className='flex-1' title="Design">
-              <div className="overflow-hidden">
+              <div className="h-full overflow-hidden">
                 <img
                   src="/assets/img/main.png"
                   alt="Design"
@@ -50,7 +50,7 @@ export default function Portfolio() {
               </div>
             </BrowserFrame>
             <BrowserFrame className='flex-1' title="Develop">
-              <div className="overflow-hidden p-3">
+              <div className=" h-full overflow-hidden p-3">
                 <img
                   src="/assets/img/image.png"
                   alt="Design"
