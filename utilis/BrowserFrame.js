@@ -1,11 +1,11 @@
 import ElectricBorder from "@/components/ElectricBorder";
 
-export default function BrowserFrame({ children, title, className = "", highlight = false }) {
+export default function BrowserFrame({ children, title, className = "", highlight = false, electro= false }) {
   return (
     <>
-    {highlight ? (
+    {electro ? (
       <ElectricBorder
-    color="#66FF00"
+      color="#66FF00"
       speed={1}
       chaos={0.12}
       thickness={2}
@@ -40,7 +40,7 @@ export default function BrowserFrame({ children, title, className = "", highligh
           <span className="ml-2 text-white/35 text-xs font-mono">{title}</span>
         )}
       </div>
-      <div className="flex-1 min-h-0">
+      <div className="flex-1 min-h-0 bg-black">
         {children}
       </div>
     </div>

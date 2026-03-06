@@ -42,7 +42,7 @@ export default function Faq() {
           {faqs.map((f, i) => (
             <div
               key={i}
-              className={`border rounded-lg overflow-hidden transition-colors ${
+              className={`border overflow-hidden transition-colors ${
                 open === i
                   ? "border-[#22c55e]/50 bg-[#22c55e]/5"
                   : "border-white/12 bg-[#111]"

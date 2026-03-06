@@ -35,12 +35,12 @@ export default function Portfolio() {
         </div>
 
         {/* Project row — matches screenshot layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 ">
           {/* Left: stacked design + develop frames */}
           <div className="flex flex-col gap-5 h-full">
             <BrowserFrame className='flex-1' title="Design">
-              <div className="h-full overflow-hidden">
-                <img
+              <div className="h-80 overflow-hidden">
+                <Image
                   src="/assets/img/main.png"
                   alt="Design"
                   className="w-full h-full object-cover"
@@ -50,8 +50,8 @@ export default function Portfolio() {
               </div>
             </BrowserFrame>
             <BrowserFrame className='flex-1' title="Develop">
-              <div className=" h-full overflow-hidden p-3">
-                <img
+              <div className=" h-80 overflow-hidden p-3">
+                <Image
                   src="/assets/img/image.png"
                   alt="Design"
                   className="w-full h-full object-cover"
@@ -64,7 +64,7 @@ export default function Portfolio() {
 
           {/* Right: big project card */}
           <BrowserFrame title="published.jsx" highlight>
-            <div className="h-80 overflow-hidden relative">
+            <div className="overflow-hidden relative">
               <img
                 src="/assets/img/image-published.png"
                 alt="Annie Photography"

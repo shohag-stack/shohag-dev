@@ -78,6 +78,7 @@ export default function Pricing() {
             <BrowserFrame
               key={p.name}
               highlight={p.highlight}
+              electro= {p.highlight}
               title={p.highlight ? `"name" : "Most Popular"` : undefined}
             >
               <div className={`p-6 pb-15 ${p.highlight && "bg-[#001A12]"}`}>
