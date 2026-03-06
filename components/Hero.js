@@ -24,6 +24,8 @@ const WaIcon = () => (
 
 // ─── HERO ──────────────────────────────────────────────────────────────────────
 export default function Hero() {
+
+  let whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_URL
   return (
     <section id="home" className="relative min-h-screen w-full flex-1 flex flex-col justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0d1420]" />
@@ -55,7 +57,7 @@ export default function Hero() {
             Start a Project <Arrow />
           </a>
           <a
-            href={process.env.WHATSAPP_URL}
+            href={whatsappLink}
             className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#25d366] hover:text-white hover:bg-[#25d366] transition-colors"
           >
             <WaIcon />

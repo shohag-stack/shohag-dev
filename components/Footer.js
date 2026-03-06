@@ -1,7 +1,9 @@
 import { WaIcon } from '@/icons/Waicon';
+import Link from 'next/link';
 import React from 'react'
 
 export default function Footer() {
+  const whatsAppUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL;
   return (
     <footer id='footer' className="bg-black border-t border-white/8">
       {/* Grid background CTA */}
@@ -28,14 +30,14 @@ export default function Footer() {
             Whether you need a new website, a product redesign, or help bringing
             an idea to life — I'd love to hear about your project.
           </p>
-          <a
-            href={process.env.WHATSAPP_URL}
+          <Link
+            href={whatsAppUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-white gap-2 bg-[#25d366] text-black font-semibold text-sm px-7 py-3.5 hover:bg-[#16a34a] transition-colors"
           >
             <WaIcon className="text-white bg-white" /> Chat with Me
-          </a>
+          </Link>
         </div>
       </div>
 
