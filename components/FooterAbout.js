@@ -1,58 +1,12 @@
 import { Arrow } from '@/icons/Arrow';
 import React from 'react'
-import { FaDribbble, FaBehance, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import designCourse from "@/icons/designCourse.svg";
-import XD from "@/icons/tools/xd.svg";
 import Image from 'next/image';
-import youtube from "@/icons/youtube.svg";
+
 import Link from 'next/link';
+import { socials, achievements, featured } from '@/db/footer';
 
 export default function FooterAbout() {
-  const socials = [
-    // {
-    //   icon: FaXTwitter,
-    //   label: "X (formerly twitter)",
-    //   handle: "@shohag4y",
-    //   bg: "#141414",
-    //   url: "https://x.com/shohag4y",
-    // },
-    {
-      icon: FaGithub,
-      label: "GitHub",
-      handle: "shohag-stack",
-      bg: "#141414",
-      url: "https://github.com/shohag-stack",
-    },
-    { icon: FaLinkedinIn, label: "LinkedIn", handle: "@shohag-stack", bg: "#161b22", url:"https://linkedin.com/in/shohag4y" },
-    { icon: FaDribbble, label: "Dribbble", handle: "@shohag4y", bg: "#ea4c89", url: "https://dribbble.com/shohag4y" },
-    { icon: FaBehance, label: "Behance", handle: "@shohag4y", bg: "#0057ff", url: "https://behance.net/shohag4y" },
-  ];
-  const achievements = [
-    {
-      icon: "G",
-      bg: "#4285f4",
-      title: "Foundations of User Experience (UX) Design",
-      date: "April 2021",
-    },
-    {
-      icon: "M",
-      bg: "#0081fb",
-      title: "Programming with JavaScript",
-      date: "Feb 2024",
-    },
-  ];
-  const featured = [
-    {
-      icon: designCourse,
-      bg: "#2d2d2d",
-      title: "DesignCourse",
-      date: "Feb 2021",
-      brand: youtube,
-      link: "https://www.youtube.com/watch?v=nL5M0qGN5RM"
-    },
-    { icon: XD, bg: "#ff61f6", title: "Adobe XD", date: "April 2020", brand: FaXTwitter, link: "https://x.com/AdobeXD/status/1245848732131889153?fbclid=IwAR17WS8qIlR15Ng18pi0MqYtq01iWPOvi8CO2TvzBe4YgeBnvvnpq5tJTks" },
-  ];
+
 
   return (
     <section className="bg-black py-16 md:py-20 border-t border-white/8">
@@ -86,21 +40,23 @@ export default function FooterAbout() {
             <p className="text-white/40 text-xs font-semibold tracking-[0.15em] uppercase mb-4">
               ACHIEVEMENTS
             </p>
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col gap-3">
               {achievements.map((a) => (
-                <div key={a.title} className="flex items-center gap-3">
+                <div key={a.title} className="flex items-center gap-5">
                   <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
-                    style={{ background: a.bg }}
+                    className=" flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
                   >
-                    {a.icon}
+                    <Image src={a.icon} alt={a.icon} width={60} height={60} />
+                    
                   </div>
                   <div>
-                    <p className="text-white text-sm font-medium">{a.title}</p>
+                    <p className="text-white text-base-bold font-medium">{a.title}</p>
                     <p className="text-white/40 text-xs">
                       {a.date} ·{" "}
                       <a
-                        href="#"
+                        href={a.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-white/60 hover:text-white underline"
                       >
                         Show Credential ↗

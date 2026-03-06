@@ -2,8 +2,7 @@ import React from 'react'
 import { MenuIcon } from '@/icons/MenuIcon';
 import { XIcon } from '@/icons/XIcon';
 import { useState } from 'react';
-
-const NAV = ["Home", "Works", "Services", "About", "My Travel", "Contact"];
+import {NAV} from '@/db/nav';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,13 +15,13 @@ export default function Navbar() {
           Shohag
         </span>
         <ul className="hidden md:flex items-center gap-8">
-          {NAV.map((n) => (
-            <li key={n}>
+          {NAV.map((la, index) => (
+            <li key={la.label}>
               <a
-                href="#"
+                href={la.href}
                 className="text-white/65 hover:text-white text-sm tracking-wide transition-colors"
               >
-                {n}
+                {la.label}
               </a>
             </li>
           ))}

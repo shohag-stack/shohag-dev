@@ -11,7 +11,7 @@ export default function About() {
   { icon: <FaXTwitter size={32} />, href: "https://x.com/shohag4y", hoverColor: "#ffffff", bg: "#1a1a1a" },
 ];
   return (
-    <section className="bg-black py-20 md:py-28">
+    <section id="about" className="bg-black py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* Left */}
         <div>

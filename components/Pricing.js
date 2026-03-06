@@ -1,70 +1,19 @@
-import { CalIcon } from '@/icons/CalIcon';
-import { WaIcon } from '@/icons/Waicon';
-import BrowserFrame from '@/utilis/BrowserFrame';
-import { Check } from '@/icons/Check';
-import React from 'react'
+import { CalIcon } from "@/icons/CalIcon";
+import { WaIcon } from "@/icons/Waicon";
+import BrowserFrame from "@/utilis/BrowserFrame";
+import { Check } from "@/icons/Check";
+import React from "react";
+import { plans } from "@/db/pricingPlans";
 
 export default function Pricing() {
-  const plans = [
-    {
-      name: "Starter",
-      accent: "#ef4444",
-      price: "$499",
-      per: "/per project",
-      desc: "Perfect for small businesses needing a clean, professional web presence.",
-      features: [
-        "Landing page design & development",
-        "Responsive & mobile-friendly",
-        "Basic SEO optimization",
-        "1 round of revisions",
-        "Delivery in 5–7 days",
-      ],
-      highlight: false,
-    },
-    {
-      name: "Professional",
-      accent: "#22c55e",
-      price: "$1,499",
-      per: "/per project",
-      desc: "Ideal for growing businesses that need a custom multi-page website or web app.",
-      features: [
-        "Up to 5 pages design & dev",
-        "Custom UI/UX design in Figma",
-        "React / Next.js development",
-        "CMS or admin panel integration",
-        "3 rounds of revisions",
-        "Delivery in 2–3 weeks",
-      ],
-      highlight: true,
-    },
-    {
-      name: "Enterprise",
-      accent: "#ef4444",
-      price: "Custom",
-      per: "/let's talk",
-      desc: "Full-scale SaaS or web application with end-to-end design and development.",
-      features: [
-        "Full SaaS / web app development",
-        "Complete design system",
-        "Backend API & database",
-        "Authentication & payments",
-        "Ongoing support & iterations",
-        "Dedicated communication channel",
-      ],
-      highlight: false,
-    },
-  ];
-
   return (
-    <section className="bg-black py-20 md:py-28 ">
+    <section id="pricing" className="bg-black py-20 md:py-28 ">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
             PRICING
           </p>
-          <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-3"
-          >
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
             Transparent Pricing
           </h2>
           <p className="text-white/45 text-sm">
@@ -78,7 +27,7 @@ export default function Pricing() {
             <BrowserFrame
               key={p.name}
               highlight={p.highlight}
-              electro= {p.highlight}
+              electro={p.highlight}
               title={p.highlight ? `"name" : "Most Popular"` : undefined}
             >
               <div className={`p-6 pb-15 ${p.highlight && "bg-[#001A12]"}`}>
@@ -92,9 +41,7 @@ export default function Pricing() {
                   </span>
                 </div>
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span
-                    className="text-3xl font-bold text-white"
-                  >
+                  <span className="text-3xl font-bold text-white">
                     {p.price}
                   </span>
                   <span className="text-white/45 text-sm">{p.per}</span>
@@ -121,9 +68,7 @@ export default function Pricing() {
         {/* Still hesitating banner */}
         <div className="border-2 border-white/15 p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
-            <h3
-              className="text-2xl font-bold text-white mb-1"
-            >
+            <h3 className="text-2xl font-bold text-white mb-1">
               Still hesitating?
             </h3>
             <p className="text-white/50 text-sm leading-relaxed max-w-md">
@@ -140,7 +85,7 @@ export default function Pricing() {
             </a>
             <span className="text-white/40 text-sm">or</span>
             <a
-              href="#"
+              href={process.env.WHATSAPP_URL}
               className="inline-flex items-center gap-2 bg-[#22c55e] text-black text-sm font-semibold px-5 py-3 hover:bg-[#16a34a] transition-colors"
             >
               <WaIcon /> Chat with Me

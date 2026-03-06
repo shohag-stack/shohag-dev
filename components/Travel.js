@@ -36,7 +36,7 @@ export default function Travel() {
    const [selected, setSelected] = useState(null);
 
   return (
-    <section className="bg-black py-20 md:py-28 border-t border-white/5">
+    <section id="travel" className="bg-black py-20 md:py-28 border-t border-white/5">
       {/* ...heading same as before... */}
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -51,7 +51,7 @@ export default function Travel() {
           </p>
         </div>
 
-      <div className="grid grid-cols-4 gap-2 h-[900px]">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 h-[900px]">
         {/* LEFT SIDE */}
         <div className="col-span-2 grid grid-rows-2 gap-2">
           <div className="row-span-1 relative group overflow-hidden">
@@ -61,7 +61,7 @@ export default function Travel() {
           <div className="grid grid-cols-2 gap-2">
             {photos.slice(1, 3).map((p) => (
               <div key={p.label} onClick={() => setSelected(p.img)} className="relative group overflow-hidden cursor-pointer">
-                <img src={p.img} alt={p.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={p.img} alt={p.label} className="w-full h-full  object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
           </div>

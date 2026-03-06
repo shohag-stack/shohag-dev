@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 
@@ -22,12 +22,10 @@ const WaIcon = () => (
   </svg>
 );
 
-
-
 // ─── HERO ──────────────────────────────────────────────────────────────────────
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex-1 flex flex-col justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full flex-1 flex flex-col justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0d1420]" />
       <Image
         src="/assets/img/hero.png"
@@ -40,8 +38,7 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" /> */}
 
       <div className="relative z-10 max-w-7xl w-full mx-auto px-5 md:px-10 pt-28 pb-8 flex-1 flex flex-col justify-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.06] mb-5 max-w-3xl"
-        >
+        <h1 className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.06] mb-5 max-w-3xl">
           UI/UX Designer &<br />
           Full-Stack Developer
         </h1>
@@ -52,14 +49,14 @@ export default function Hero() {
         </p>
         <div className="flex items-center gap-3">
           <a
-            href="#"
-            className="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-3 hover:bg-white/90 transition-colors"
+            href={process.env.NEXT_PUBLIC_CALENDLY_LINK}
+            className="cursor-pointer inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-3 hover:bg-white/90 transition-colors"
           >
             Start a Project <Arrow />
           </a>
           <a
-            href="#"
-            className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-[#25d366] hover:bg-white/10 transition-colors"
+            href={process.env.WHATSAPP_URL}
+            className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#25d366] hover:text-white hover:bg-[#25d366] transition-colors"
           >
             <WaIcon />
           </a>
@@ -75,11 +72,7 @@ export default function Hero() {
             ["100%", "Client Satisfaction"],
           ].map(([n, l]) => (
             <div key={n}>
-              <p
-                className="text-4xl sm:text-4xl font-black text-white"
-              >
-                {n}
-              </p>
+              <p className="text-4xl sm:text-4xl font-black text-white">{n}</p>
               <p className="text-white/45 text-sm mt-1 tracking-wide">{l}</p>
             </div>
           ))}

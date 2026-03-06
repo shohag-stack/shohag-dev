@@ -3,13 +3,13 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-white/8">
+    <footer id='footer' className="bg-black border-t border-white/8">
       {/* Grid background CTA */}
       <div
         className="relative overflow-hidden py-24 px-5"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px)",
+            "linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       >
@@ -29,10 +29,12 @@ export default function Footer() {
             an idea to life — I'd love to hear about your project.
           </p>
           <a
-            href="#"
-            className="inline-flex items-center gap-2 bg-[#22c55e] text-black font-semibold text-sm px-7 py-3.5 hover:bg-[#16a34a] transition-colors rounded-sm"
+            href={process.env.WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-white gap-2 bg-[#25d366] text-black font-semibold text-sm px-7 py-3.5 hover:bg-[#16a34a] transition-colors"
           >
-            <WaIcon /> Chat with Me
+            <WaIcon className="text-white bg-white" /> Chat with Me
           </a>
         </div>
       </div>

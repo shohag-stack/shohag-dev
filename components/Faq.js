@@ -1,29 +1,11 @@
 import { ChevDown } from '@/icons/ChevDown';
 import React, { useState } from 'react'
-
+import {faqs} from '@/db/faq';
 export default function Faq() {
   const [open, setOpen] = useState(null);
-  const faqs = [
-    {
-      q: "/* What services do you offer? */",
-      a: "I offer UI/UX design, frontend development, full-stack development, SaaS product design, and end-to-end web builds. From Figma wireframes to deployed React/Next.js apps.",
-    },
-    {
-      q: "/* What is your typical project process? */",
-      a: "Discovery → Proposal → Design → Development → Review → Launch. I keep you informed at every step with clear deliverables and timelines.",
-    },
-    {
-      q: "/* How long does a project usually take? */",
-      a: "Project timelines depend on the scope. A landing page may take 1–2 weeks, while a full website can take 3–6 weeks depending on complexity and feedback cycles.",
-    },
-    {
-      q: "/* Do you provide both design and development? */",
-      a: "Yes! I handle the complete pipeline — from UX research and Figma design to React/Next.js development and deployment.",
-    },
-  ];
 
   return (
-    <section className="bg-black py-20 md:py-28 border-t border-white/5">
+    <section id='faq' className="bg-black py-20 md:py-28 border-t border-white/5">
       <div className="max-w-2xl mx-auto px-5 md:px-10">
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
