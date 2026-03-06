@@ -69,7 +69,7 @@ export default function Pricing() {
           </h2>
           <p className="text-white/45 text-sm">
             Straightforward pricing for every stage of your project. No hidden
-            fees.
+            fees
           </p>
         </div>
 

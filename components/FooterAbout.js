@@ -1,17 +1,32 @@
 import { Arrow } from '@/icons/Arrow';
 import React from 'react'
+import { FaDribbble, FaBehance, FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import designCourse from "@/icons/designCourse.svg";
+import XD from "@/icons/tools/xd.svg";
+import Image from 'next/image';
+import youtube from "@/icons/youtube.svg";
+import Link from 'next/link';
 
 export default function FooterAbout() {
   const socials = [
+    // {
+    //   icon: FaXTwitter,
+    //   label: "X (formerly twitter)",
+    //   handle: "@shohag4y",
+    //   bg: "#141414",
+    //   url: "https://x.com/shohag4y",
+    // },
     {
-      icon: "𝕏",
-      label: "X (formerly twitter)",
-      handle: "@shohag4y",
-      bg: "#000",
+      icon: FaGithub,
+      label: "GitHub",
+      handle: "shohag-stack",
+      bg: "#141414",
+      url: "https://github.com/shohag-stack",
     },
-    { icon: "⎇", label: "Github", handle: "@shohag-stack", bg: "#161b22" },
-    { icon: "🏀", label: "Dribbble", handle: "@shohag4y", bg: "#ea4c89" },
-    { icon: "Bē", label: "Behance", handle: "@shohag4y", bg: "#0057ff" },
+    { icon: FaLinkedinIn, label: "LinkedIn", handle: "@shohag-stack", bg: "#161b22", url:"https://linkedin.com/in/shohag4y" },
+    { icon: FaDribbble, label: "Dribbble", handle: "@shohag4y", bg: "#ea4c89", url: "https://dribbble.com/shohag4y" },
+    { icon: FaBehance, label: "Behance", handle: "@shohag4y", bg: "#0057ff", url: "https://behance.net/shohag4y" },
   ];
   const achievements = [
     {
@@ -29,13 +44,14 @@ export default function FooterAbout() {
   ];
   const featured = [
     {
-      icon: "DC",
+      icon: designCourse,
       bg: "#2d2d2d",
       title: "DesignCourse",
       date: "Feb 2021",
-      yt: true,
+      brand: youtube,
+      link: "https://www.youtube.com/watch?v=nL5M0qGN5RM"
     },
-    { icon: "Xd", bg: "#ff61f6", title: "Adobe XD", date: "April 2020" },
+    { icon: XD, bg: "#ff61f6", title: "Adobe XD", date: "April 2020", brand: FaXTwitter, link: "https://x.com/AdobeXD/status/1245848732131889153?fbclid=IwAR17WS8qIlR15Ng18pi0MqYtq01iWPOvi8CO2TvzBe4YgeBnvvnpq5tJTks" },
   ];
 
   return (
@@ -44,10 +60,12 @@ export default function FooterAbout() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left: bio */}
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+            <Image
+              src="/assets/img/avatar.png"
               alt="Shohag"
-              className="w-16 h-16 rounded-full object-cover border-2 border-white/20 mb-5"
+              className="w-30 h-30 rounded-full object-cover border-white/20 mb-5"
+              width={100}
+              height={100}
             />
             <h2
               className="text-3xl font-bold text-white mb-4"
@@ -99,7 +117,8 @@ export default function FooterAbout() {
             <div className="grid grid-cols-2 gap-3 mb-6">
               {socials.map((s) => (
                 <a
-                  href="#"
+                  href={s.url}
+                  target='blank'
                   key={s.label}
                   className="flex items-center justify-between gap-3 border border-white/12 rounded-xl px-4 py-3 hover:border-white/25 transition-colors group"
                 >
@@ -108,7 +127,7 @@ export default function FooterAbout() {
                       className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-xs font-bold"
                       style={{ background: s.bg }}
                     >
-                      {s.icon}
+                       <s.icon className="text-white text-sm" />
                     </div>
                     <div>
                       <p className="text-white text-xs font-semibold">
@@ -143,7 +162,7 @@ export default function FooterAbout() {
               </div>
               <p className="text-white/35 text-[10px] mt-2">
                 1,877 contributions in the last year on{" "}
-                <span className="text-[#f05032]">GitHub</span>
+                <a href='https://github.com/shohag-stack/' className="text-[#f05032]">GitHub</a>
               </p>
             </div>
 
@@ -152,28 +171,24 @@ export default function FooterAbout() {
             </p>
             <div className="space-y-3">
               {featured.map((f) => (
-                <div key={f.title} className="flex items-center gap-3">
+                <div key={f.title} className="flex items-center gap-6">
                   <div
-                    className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-bold text-xs flex-shrink-0"
-                    style={{ background: f.bg }}
+                    className="flex items-center justify-center text-white font-bold text-xs flex-shrink-0"
+                    
                   >
-                    {f.icon}
+                    <Image src={f.icon} alt={f.title} width={60} height={60} />
                   </div>
                   <div>
-                    <p className="text-white text-sm font-medium">{f.title}</p>
-                    <p className="text-white/40 text-xs">
+                    <p className="text-white text-base-bold font-medium">{f.title}</p>
+                    <p className="text-white/40 text-xs flex items-center gap-2">
                       {f.date} ·{" "}
-                      {f.yt && (
-                        <span className="text-red-500 font-medium">
-                          ▶ YouTube
-                        </span>
-                      )}{" "}
-                      <a
-                        href="#"
-                        className="text-white/60 hover:text-white underline ml-1"
-                      >
+                      {typeof f.brand === "function"
+                        ? <f.brand className="text-white w-10 h-4" />          // React Icon component
+                        : <Image src={f.brand} alt="brand" width={74} height={16} />  // SVG/PNG import
+                      }
+                      <Link target='_blank' href={f.link} className="text-white/60 hover:text-white underline">
                         Show Post ↗
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </div>
