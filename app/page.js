@@ -12,6 +12,7 @@ import Travel from "@/components/Travel";
 import FooterAbout from "@/components/FooterAbout";
 import Footer from "@/components/Footer";
 import LenisProvider from "@/components/LenisProvider";
+import { EmblaCarousel } from "@/components/EmblaCarousel";
 
 export default function Home() {
 
@@ -22,6 +23,7 @@ export default function Home() {
         <div className="min-h-screen">
           <Navbar />
           <Hero />
+          <EmblaCarousel />
           <About />
           <Services />
           <Pricing />
