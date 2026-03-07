@@ -4,8 +4,13 @@ import BrowserFrame from "@/utilis/BrowserFrame";
 import { Check } from "@/icons/Check";
 import React from "react";
 import { plans } from "@/db/pricingPlans";
+import Link from "next/link";
 
 export default function Pricing() {
+
+  let clanedyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
+  let whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL
+
   return (
     <section id="pricing" className="bg-black py-20 md:py-28 ">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
@@ -77,19 +82,19 @@ export default function Pricing() {
             </p>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
-            <a
-              href="#"
+            <Link
+              href={clanedyUrl}
               className="inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-3 hover:bg-white/90 transition-colors"
             >
               <CalIcon /> Book a Call
-            </a>
+            </Link>
             <span className="text-white/40 text-sm">or</span>
-            <a
-              href={process.env.WHATSAPP_URL}
+            <Link
+              href={whatsappUrl}
               className="inline-flex items-center gap-2 bg-[#22c55e] text-black text-sm font-semibold px-5 py-3 hover:bg-[#16a34a] transition-colors"
             >
               <WaIcon /> Chat with Me
-            </a>
+            </Link>
           </div>
         </div>
       </div>

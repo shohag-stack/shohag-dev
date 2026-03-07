@@ -72,13 +72,13 @@ export default function Portfolio() {
                 <p className="text-white font-medium text-xl leading-relaxed mb-2">
                   {project.bigDesc}
                 </p>
-                <p className="text-white/50 text-base leading-relaxed">
+                <p className="text-white/50 text-base leading-relaxed mb-10">
                   {project.bigExtra}
                 </p>
 
                 <Link
                   href={"#"}
-                  className="flex items-center gap-1 text-[#22c55e] text-xs font-semibold"
+                  className="px-5 py-2 border border-white text-white font-semibold inline-flex items-center gap-4 transition-all hover:bg-white/90 hover:text-black"
                 >
                   🌐 See Live
                 </Link>

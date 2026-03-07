@@ -19,7 +19,7 @@ export default function BrowserFrame({ children, title, className = "", highligh
         <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
         <span className="w-3 h-3 rounded-full bg-[#28c840]" />
         {title && (
-          <span className="ml-2 text-white/35 text-xs font-mono">{title}</span>
+          <span className="ml-2 text-[#EEFF00] text-xs font-mono">{title}</span>
         )}
       </div>
       <div className="flex-1 min-h-0">
