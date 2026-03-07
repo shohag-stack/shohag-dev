@@ -54,7 +54,7 @@ const steps = [
   }, []);
 
   return (
-    <section id="workflow" className="bg-black py-20 md:py-28">
+    <section id="workflow" className=" py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="text-center mb-16">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">

@@ -15,10 +15,11 @@ import LenisProvider from "@/components/LenisProvider";
 
 export default function Home() {
 
+
   return (
     <>
       <LenisProvider>
-        <div className="min-h-screen bg-black">
+        <div className="min-h-screen">
           <Navbar />
           <Hero />
           <About />

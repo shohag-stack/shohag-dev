@@ -5,7 +5,7 @@ import React from 'react'
 export default function Footer() {
   const whatsAppUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL;
   return (
-    <footer id='footer' className="bg-black border-t border-white/8">
+    <footer id='footer' className=" border-t border-white/8">
       {/* Grid background CTA */}
       <div
         className="relative overflow-hidden py-24 px-5"

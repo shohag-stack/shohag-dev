@@ -12,7 +12,7 @@ export default function Pricing() {
   let whatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL
 
   return (
-    <section id="pricing" className="bg-black py-20 md:py-28 ">
+    <section id="pricing" className="py-20 md:py-28 ">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
@@ -32,7 +32,7 @@ export default function Pricing() {
             <BrowserFrame
               key={p.name}
               highlight={p.highlight}
-              electro={p.highlight}
+              
               title={p.highlight ? `"name" : "Most Popular"` : undefined}
             >
               <div className={`p-6 pb-15 ${p.highlight && "bg-[#001A12]"}`}>

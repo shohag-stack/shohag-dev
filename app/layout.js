@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Noise from "@/components/Noise";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -12,12 +13,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${inter.variable} antialiased`}>
-      
-        {children}</body>
+        
+          {children}
+        <Noise
+          patternSize={250}
+          patternScaleX={2}
+          patternScaleY={2}
+          patternRefreshInterval={2}
+          patternAlpha={25}
+        />
+      </body>
     </html>
   );
 }

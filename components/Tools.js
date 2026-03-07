@@ -6,7 +6,7 @@ export default function Tools() {
   
 
   return (
-    <section id="tools" className="bg-[#0a0a0a] py-20 md:py-28 border-t border-white/5">
+    <section id="tools" className=" py-20 md:py-28 border-t border-white/5">
       <div className="max-w-5xl mx-auto px-5 md:px-10">
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">

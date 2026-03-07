@@ -36,7 +36,7 @@ export default function Travel() {
    const [selected, setSelected] = useState(null);
 
   return (
-    <section id="travel" className="bg-black py-20 md:py-28 border-t border-white/5">
+    <section id="travel" className="py-20 md:py-28 border-t border-white/5">
       {/* ...heading same as before... */}
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">

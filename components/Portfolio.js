@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Portfolio() {
   return (
-    <section id="works" className="bg-black py-20 md:py-10 ">
+    <section id="works" className=" py-20 md:py-10 ">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="text-center mb-14">
           <p className="text-white/45 text-xs font-semibold tracking-[0.2em] uppercase mb-3">

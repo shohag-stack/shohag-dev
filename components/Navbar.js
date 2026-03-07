@@ -3,17 +3,19 @@ import { MenuIcon } from '@/icons/MenuIcon';
 import { XIcon } from '@/icons/XIcon';
 import { useState } from 'react';
 import {NAV} from '@/db/nav';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/10 backdrop-blur-md border-b border-white/8">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/8">
       <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between h-[60px]">
-        <span
+        <Link
+          href={'/'}
           className="text-white text-xl tracking-wide"
         >
           Shohag
-        </span>
+        </Link>
         <ul className="hidden md:flex items-center gap-8">
           {NAV.map((la, index) => (
             <li key={la.label}>
