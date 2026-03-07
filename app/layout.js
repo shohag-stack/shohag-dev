@@ -16,15 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} antialiased`}>
-        
           {children}
-        <Noise
-          patternSize={250}
-          patternScaleX={2}
-          patternScaleY={2}
-          patternRefreshInterval={2}
-          patternAlpha={25}
-        />
       </body>
     </html>
   );
