@@ -11,32 +11,28 @@ import Faq from "@/components/Faq";
 import Travel from "@/components/Travel";
 import FooterAbout from "@/components/FooterAbout";
 import Footer from "@/components/Footer";
-import { ReactLenis, useLenis } from "lenis/react";
+import LenisProvider from "@/components/LenisProvider";
 
 export default function Home() {
-  const lenis = useLenis((lenis) => {
-    // called every scroll
-    console.log(lenis);
-  });
 
   return (
     <>
-      <ReactLenis root />
-
-      <div className="min-h-screen bg-black">
-        <Navbar />
-        <Hero />
-        <About />
-        <Services />
-        <Pricing />
-        <Portfolio />
-        <WorkFlow />
-        <Tools />
-        <Faq />
-        <Travel />
-        <FooterAbout />
-        <Footer />
-      </div>
+      <LenisProvider>
+        <div className="min-h-screen bg-black">
+          <Navbar />
+          <Hero />
+          <About />
+          <Services />
+          <Pricing />
+          <Portfolio />
+          <WorkFlow />
+          <Tools />
+          <Faq />
+          <Travel />
+          <FooterAbout />
+          <Footer />
+        </div>
+      </LenisProvider>
     </>
   );
 }

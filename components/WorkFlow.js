@@ -194,7 +194,7 @@ const steps = [
                 transformOrigin: "48.5px 345.521px",
               }}
             />
-            <circle cx="48.5" cy="345.521" r="9.14" fill="#00FF44" />
+            <circle cx="48.5" cy="345.521" r="9.14" fill="#fff" />
             <circle cx="48.5" cy="345.521" r="4.74" fill="white" />
           </g>
 
