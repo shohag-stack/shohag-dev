@@ -51,7 +51,7 @@ export default function Hero() {
         </p>
         <div className="flex items-center gap-3">
           <a
-            href={process.env.NEXT_PUBLIC_CALENDLY_LINK}
+            href={'/contact'}
             className="cursor-pointer inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-3 hover:bg-white/90 transition-colors"
           >
             Start a Project <Arrow />

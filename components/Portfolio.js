@@ -24,7 +24,7 @@ export default function Portfolio() {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5 "
+            className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-7 "
           >
             {/* Left: stacked design + develop frames */}
             <div className="flex flex-col gap-5 h-full">
