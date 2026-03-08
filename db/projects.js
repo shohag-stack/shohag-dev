@@ -10,8 +10,8 @@ export const projects = [
     bigExtra:
       "Annie Leibovitz blends timeless minimalism with expressive storytelling, creating a refined digital space to showcase your photography.",
     live: true,
-    designImage: "/assets/img/main.png",
-    developImage: "/assets/img/image.png",
-    publishedImage: "/assets/img/image-published.png",
+    designImage: "/assets/img/image-published.png",
+    developImage: "/assets/img/full-stack.png",
+    publishedImage: "/assets/img/main.png",
   },
 ];
