@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { MenuIcon } from '@/icons/MenuIcon';
 import { XIcon } from '@/icons/XIcon';
@@ -30,7 +31,7 @@ export default function Navbar() {
         </ul>
         <div className="flex items-center gap-3">
           <a
-            href="#"
+            href="/contact"
             className="hidden md:inline-flex border border-white text-white text-sm px-4 py-2 hover:bg-white hover:text-black transition-all tracking-wide"
           >
             Start Project

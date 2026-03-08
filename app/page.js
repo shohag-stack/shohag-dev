@@ -19,9 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <LenisProvider>
         <div className="min-h-screen">
-          <Navbar />
           <Hero />
           <EmblaCarousel />
           <About />
@@ -33,9 +31,7 @@ export default function Home() {
           <Faq />
           <Travel />
           <FooterAbout />
-          <Footer />
         </div>
-      </LenisProvider>
     </>
   );
 }

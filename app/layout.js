@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Noise from "@/components/Noise";
+import LenisProvider from "@/components/LenisProvider";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,7 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} antialiased`}>
+        <LenisProvider>
+          <Navbar />
           {children}
+          <Footer />
+          </LenisProvider>
       </body>
     </html>
   );
