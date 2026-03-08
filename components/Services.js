@@ -20,7 +20,7 @@ export default function Services() {
       accent: "#f59e0b",
       title: "Full-Stack Solutions",
       desc: "Beautiful, conversion-focused UI/UX design for web apps and SaaS products. From wireframes to polished interfaces.",
-      preview: "/assets/img/full-stack.png",
+      preview: "/assets/portfolio/full-stack.png",
     },
   ];
 
