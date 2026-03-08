@@ -29,7 +29,7 @@ export default function Portfolio() {
             {/* Left: stacked design + develop frames */}
             <div className="flex flex-col gap-5 h-full">
               <BrowserFrame className="flex-1" title="Design">
-                <div className="h-80 overflow-hidden">
+                <div className="h-100 overflow-hidden">
                   <Image
                     src={project.designImage}
                     alt="Design"
@@ -40,7 +40,7 @@ export default function Portfolio() {
                 </div>
               </BrowserFrame>
               <BrowserFrame className="flex-1" title="Develop">
-                <div className=" h-80 overflow-hidden p-3">
+                <div className=" h-100 overflow-hidden p-3">
                   <Image
                     src={project.developImage}
                     alt="Design"
@@ -69,7 +69,7 @@ export default function Portfolio() {
                     {project.bigTitle}
                   </h3>
                 </div>
-                <p className="text-white font-medium text-xl leading-relaxed mb-2">
+                <p className="text-white font-medium text-lg leading-7 mb-2">
                   {project.bigDesc}
                 </p>
                 <p className="text-white/50 text-base leading-relaxed mb-10">
@@ -77,7 +77,7 @@ export default function Portfolio() {
                 </p>
 
                 <Link
-                  href={"#"}
+                  href={project.url}
                   className="px-5 py-2 border border-white text-white font-semibold inline-flex items-center gap-4 transition-all hover:bg-white/90 hover:text-black"
                 >
                   🌐 See Live

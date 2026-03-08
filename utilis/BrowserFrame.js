@@ -37,7 +37,7 @@ export default function BrowserFrame({ children, title, className = "", highligh
         <span className="w-3 h-3 rounded-full bg-[#febc2e]" />
         <span className="w-3 h-3 rounded-full bg-[#28c840]" />
         {title && (
-          <span className="ml-2 text-white/35 text-xs font-mono">{title}</span>
+          <span style={{ color: highlight ? "#EEFF00" : "rgba(255,255,255,0.35)" }}  className="ml-2 text-white/35 text-xs font-mono">{title}</span>
         )}
       </div>
       <div className="flex-1 min-h-0 bg-black">
