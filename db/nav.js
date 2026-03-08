@@ -23,6 +23,6 @@ export const NAV = [
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "contact",
   },
 ];

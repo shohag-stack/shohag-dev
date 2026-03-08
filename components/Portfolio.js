@@ -57,7 +57,7 @@ export default function Portfolio() {
               <div className="overflow-hidden relative">
                 <Image
                   src={project.publishedImage}
-                  alt="Annie Photography"
+                  alt={project.bigTitle}
                   className="w-full h-full object-cover"
                   width={1920}
                   height={900}
@@ -78,7 +78,7 @@ export default function Portfolio() {
 
                 <Link
                   href={project.url}
-                  className="px-5 py-2 border border-white text-white font-semibold inline-flex items-center gap-4 transition-all hover:bg-white/90 hover:text-black"
+                  className="px-5 py-2 border border-white text-black bg-white font-semibold inline-flex items-center gap-4 transition-all hover:bg-white/90 hover:text-black"
                 >
                   🌐 See Live
                 </Link>

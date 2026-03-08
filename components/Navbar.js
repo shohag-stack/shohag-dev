@@ -20,12 +20,12 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-8">
           {NAV.map((la, index) => (
             <li key={la.label}>
-              <a
-                href={la.href}
+              <Link
+                href={`/${la.href}`}
                 className="text-white/65 hover:text-white text-sm tracking-wide transition-colors"
               >
                 {la.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -47,14 +47,14 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-[#0d0d0d] border-t border-white/10 px-5 py-6 flex flex-col gap-5">
           {NAV.map((n) => (
-            <a
+            <Link
               key={n}
               href="#"
               className="text-white/75 hover:text-white text-base"
               onClick={() => setOpen(false)}
             >
               {n}
-            </a>
+            </Link>
           ))}
           <a
             href="#"

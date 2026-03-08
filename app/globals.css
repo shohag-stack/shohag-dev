@@ -191,3 +191,6 @@ body {
   touch-action: pan-y pinch-zoom;
 }
 
+html {
+  scroll-behavior: smooth;
+}
