@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Noise from "@/components/Noise";
 import LenisProvider from "@/components/LenisProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,7 +23,12 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
-          </LenisProvider>
+        </LenisProvider>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="976e2ffc-36db-4be9-b4a0-68ee783859d8"
+        ></Script>
       </body>
     </html>
   );
