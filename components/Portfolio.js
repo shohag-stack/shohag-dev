@@ -55,13 +55,20 @@ export default function Portfolio() {
             {/* Right: big project card */}
             <BrowserFrame title="published.jsx" highlight>
               <div className="overflow-hidden relative">
-                <Image
+                {
+                  project.publishedVideo ? (
+                <video src={project.publishedVideo} autoPlay loop muted className="w-full h-full object-cover" />
+
+              ) : (
+                 <Image
                   src={project.publishedImage}
                   alt={project.bigTitle}
                   className="w-full h-full object-cover"
                   width={1920}
                   height={900}
                 />
+                )
+                }
               </div>
               <div className="p-5">
                 <div className="flex items-center justify-between mb-2">

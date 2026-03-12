@@ -25,6 +25,7 @@ export const projects = [
     designImage: "/assets/portfolio/anniel-design.png",
     developImage: "/assets/portfolio/full-stack.png",
     publishedImage: "/assets/portfolio/anniel.png",
+    publishedVideo: "/assets/portfolio/anniel.mp4",
     url: "http://anniel.framer.website/",
   },
 

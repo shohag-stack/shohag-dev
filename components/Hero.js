@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import GooeyButton from "./Button";
 
 const Arrow = ({ size = 14 }) => (
   <svg
