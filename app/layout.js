@@ -34,10 +34,19 @@ export const metadata = {
     siteName: "Shohag Portfolio",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: 'https://shohag-work.vercel.app/assets/og-image.png', // Must be an absolute URL
+        width: 1200,
+        height: 630,
+        alt: 'My Website Open Graph Image',
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Shohag | Designer & Full Stack Developer",
+    images: ['https://shohag-work.vercel.app/assets/og-image.png'],
     description:
       "Designing and building modern web experiences. Check out Shohag's portfolio.",
     creator: "@shohag4y",
