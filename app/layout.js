@@ -4,6 +4,7 @@ import LenisProvider from "@/components/LenisProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import PopUp from "@/components/PopUp";
 
 const inter = Inter({
   variable: "--font-inter",

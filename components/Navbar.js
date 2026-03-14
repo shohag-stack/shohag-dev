@@ -5,11 +5,13 @@ import { XIcon } from '@/icons/XIcon';
 import { useState } from 'react';
 import {NAV} from '@/db/nav';
 import Link from 'next/link';
+import PopUp from '@/components/PopUp';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-white/8">
+       <PopUp />
       <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-center justify-between h-[60px]">
         <Link
           href={'/'}
