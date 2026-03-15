@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import GooeyButton from "./Button";
 
@@ -30,13 +29,14 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen w-full flex-1 flex flex-col justify-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0d1420]" />
-      <Image
+      {/* <Image
         src="/assets/img/hero.png"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}
         height={1080}
-      />
+      /> */}
+      <video autoPlay loop muted playsInline src="/assets/video/hero.mp4" className="absolute inset-0 w-full h-full object-cover"  />
       {/* <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-transparent" /> */}
       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" /> */}
 
