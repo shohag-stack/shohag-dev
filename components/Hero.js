@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import GooeyButton from "./Button";
+import { motion } from "framer-motion";
 
 const Arrow = ({ size = 14 }) => (
   <svg
@@ -22,6 +21,22 @@ const WaIcon = () => (
   </svg>
 );
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+};
+
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.3,
+    },
+  },
+};
+
 // ─── HERO ──────────────────────────────────────────────────────────────────────
 export default function Hero() {
 
@@ -40,31 +55,45 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-transparent" /> */}
       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" /> */}
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-5 md:px-10 pt-28 pb-8 flex-1 flex flex-col justify-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.06] mb-5 max-w-3xl">
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        animate="show"     
+      className="relative z-10 max-w-7xl w-full mx-auto px-5 md:px-10 pt-28 pb-8 flex-1 flex flex-col justify-center">
+        <motion.h1 
+        variants={fadeUp}
+        initial="hidden"
+        animate="show"
+        className="text-4xl sm:text-5xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.06] mb-5 max-w-3xl">
           UI/UX Designer &<br />
           Full-Stack Developer
-        </h1>
-        <p className="text-white/65 text-base-bold sm:text-lg md:text-base-bold font-medium mb-10 max-w-[520px]">
+        </motion.h1>
+        <motion.p variants={fadeUp} initial="hidden" animate="show" className="text-white/65 text-base-bold sm:text-lg md:text-base-bold font-medium mb-10 max-w-[520px]">
           I&apos;m Mohammad Shohag — a UI/UX Designer and Frontend Developer
           helping startups and growing businesses launch high-performing
           websites, SaaS platforms, and product experiences.
-        </p>
+        </motion.p>
         <div className="flex items-center gap-3">
-          <a
+          <motion.a
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"  
             href={'/contact'}
             className="cursor-pointer inline-flex items-center gap-2 bg-white text-black text-sm font-semibold px-5 py-3 hover:bg-white/90 transition-colors"
           >
             Start a Project <Arrow />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
             href={whatsappLink}
             className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#25d366] hover:text-white hover:bg-[#25d366] transition-colors"
           >
             <WaIcon />
-          </a>
+          </motion.a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Stats strip */}
       <div className="relative z-10 from-black to-transparent bg-linear-to-t">
