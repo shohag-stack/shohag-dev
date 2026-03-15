@@ -50,12 +50,12 @@ export default function Navbar() {
         <div className="md:hidden bg-[#0d0d0d] border-t border-white/10 px-5 py-6 flex flex-col gap-5">
           {NAV.map((n) => (
             <Link
-              key={n}
-              href="#"
+              key={n.href}
+              href={`/${n.href}`}
               className="text-white/75 hover:text-white text-base"
               onClick={() => setOpen(false)}
             >
-              {n}
+              {n.label}
             </Link>
           ))}
           <a
