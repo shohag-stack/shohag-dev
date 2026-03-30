@@ -1,6 +1,5 @@
 "use client";
 import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
@@ -11,6 +10,7 @@ import Faq from "@/components/Faq";
 import Travel from "@/components/Travel";
 import FooterAbout from "@/components/FooterAbout";
 import { EmblaCarousel } from "@/components/EmblaCarousel";
+import Video from "@/components/Video";
 
 export default function Home() {
 
@@ -20,6 +20,7 @@ export default function Home() {
         <div className="min-h-screen">
           <Hero />
           <EmblaCarousel />
+          <Video />
           <About />
           <Services />
           <Pricing />

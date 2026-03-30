@@ -60,10 +60,10 @@ export default function ContactPage() {
       <div className="w-full max-w-2xl">
         <div className="mb-10">
           <h1 className="text-4xl font-bold text-white mb-3">
-            Let's work together
+            Let&apos;s work together
           </h1>
           <p className="text-white/45">
-            Tell us about your project and we'll get back to you within 24
+            Tell us about your project and we&apos;ll get back to you within 24
             hours.
           </p>
         </div>
@@ -163,7 +163,7 @@ export default function ContactPage() {
 
             {status === "success" && (
               <p className="text-[#22c55e] text-sm text-center">
-                ✓ Message sent! We'll be in touch soon.
+                ✓ Message sent! We&apos;ll be in touch soon.
               </p>
             )}
             {status === "error" && (
